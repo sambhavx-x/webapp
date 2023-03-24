@@ -23,15 +23,18 @@ const Form = () => {
     }
     finalTo = toDate.getTime();
     finalFrom = fromDate.getTime();
-    const travelResponse = await fetch("http://localhost:5000/travel/post", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        date: selectedDate,
-        fromTime: finalFrom,
-        toTime: finalTo,
-      }),
-    });
+    const travelResponse = await fetch(
+      " https://us-central1-tride-66c25.cloudfunctions.net/helloWorld/travel/post",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          date: selectedDate,
+          fromTime: finalFrom,
+          toTime: finalTo,
+        }),
+      }
+    );
     console.log(selectedDate);
     console.log(finalFrom);
     console.log(finalTo);
