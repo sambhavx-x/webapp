@@ -24,7 +24,7 @@ const Form = () => {
     finalTo = toDate.getTime();
     finalFrom = fromDate.getTime();
     const travelResponse = await fetch(
-      "https://us-central1-tride-66c25.cloudfunctions.net/travel/post",
+      "https://us-central1-tride-66c25.cloudfunctions.net/helloWorld/travel/post",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
