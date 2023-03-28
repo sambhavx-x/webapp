@@ -1,3 +1,164 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Fonts */
+
+@font-face {
+	font-display: "swap";
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''),
+		url('../fonts/montserrat-v25-latin-regular.woff2') format('woff2'),
+		url('../fonts/montserrat-v25-latin-regular.woff') format('woff');
+}
+
+@font-face {
+	font-display: "swap";
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	src: local(''),
+		url('../fonts/montserrat-v25-latin-700.woff2') format('woff2'),
+		url('../fonts/montserrat-v25-latin-700.woff') format('woff');
+}
+
+@font-face {
+	font-display: "swap";
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''),
+		url('../fonts/open-sans-v34-latin-regular.woff2') format('woff2'),
+		url('../fonts/open-sans-v34-latin-regular.woff') format('woff');
+}
+
+@font-face {
+	font-display: "swap";
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 800;
+	src: local(''),
+		url('../fonts/open-sans-v34-latin-800.woff2') format('woff2'),
+		url('../fonts/open-sans-v34-latin-800.woff') format('woff');
+}
+
+@font-face {
+	font-display: "swap";
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''),
+		url('../fonts/poppins-v20-latin-regular.woff2') format('woff2'),
+		url('../fonts/poppins-v20-latin-regular.woff') format('woff');
+}
+
+@font-face {
+	font-display: "swap";
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''),
+		url('../fonts/roboto-v30-latin-regular.woff2') format('woff2'),
+		url('../fonts/roboto-v30-latin-regular.woff') format('woff');
+}
+
+html {
+	height: 100vh;
+}
+
+body {
+	background-color: #181820;
+	font-family: "Poppins", sans-serif;
+	height: 100%;
+}
+
+button {
+	appearance: none;
+	background-image: linear-gradient(to left top, #BB3FDD, #ED63B4, #F4729D, #FF9F7C) !important;
+	border: 1px solid rgba(27, 31, 35, 0.15);
+	border-radius: 7px;
+	box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+	box-sizing: border-box;
+	color: #FAFBFC;
+	cursor: pointer;
+	display: flex;
+	font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 20px;
+	list-style: none;
+	padding: 10px 18px;
+	position: relative;
+	transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	vertical-align: middle;
+	white-space: nowrap;
+	word-wrap: break-word;
+	text-align: center;
+	vertical-align: middle;
+	align-items: center;
+	margin: 20px;
+}
+
+button:hover {
+	background-color: #e0e1e3;
+	text-decoration: none;
+	transition-duration: 0.1s;
+}
+
+button:disabled {
+	background-color: #fafbfc87;
+	border-color: rgba(27, 31, 35, 0.15);
+	color: #959DA5;
+	cursor: default;
+}
+
+button:active {
+	background-color: #d7d9dc;
+	box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+	transition: none 0s;
+}
+
+button:focus {
+	outline: 1px transparent;
+}
+
+button:before {
+	display: none;
+}
+
+button:-webkit-details-marker {
+	display: none;
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+	background-image: linear-gradient(to left top, #BB3FDD, #ED63B4, #F4729D, #FF9F7C) !important;
+}
+
+.ball {
+	display: block;
+	aspect-ratio: 1/1;
+	/* margin: 50px auto 0; */
+	position: absolute;
+	border-radius: 50%;
+}
+
+.b1 {
+	left: 10vw;
+	width: 250px;
+	top: -100px;
+	background: radial-gradient(circle at 100% 5%, #FF9F7C 20%, #F4729D 45%, #ED63B4 60%, #69079A 90%);
+}
+
+.b2 {
+	right: 10vw;
+	top: 5vh;
+	width: clamp(150px, 10vw, 75px);
+	background: radial-gradient(circle at 75% 20%, rgba(120, 120, 120, 0.2), rgba(0, 0, 0, 1));
+}
