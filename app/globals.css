@@ -151,14 +151,26 @@ button,
 
 .b1 {
 	left: 10vw;
-	width: 250px;
 	top: -100px;
+	/* width: 250px; */
 	background: radial-gradient(circle at 100% 5%, #FF9F7C 20%, #F4729D 45%, #ED63B4 60%, #69079A 90%);
 }
 
 .b2 {
 	right: 10vw;
 	top: 5vh;
-	width: clamp(150px, 10vw, 75px);
+	/* width: 135px; */
 	background: radial-gradient(circle at 75% 20%, rgba(120, 120, 120, 0.2), rgba(0, 0, 0, 1));
+}
+
+@media screen and (max-width: 640px) {
+	.b1 {
+		left: -25vw;
+		top: -25vw;
+	}
+
+	.b2 {
+		right: 5vw;
+		top: 2vh;
+	}
 }
